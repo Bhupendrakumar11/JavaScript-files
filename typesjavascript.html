@@ -1,0 +1,40 @@
+<!-- Types of JavaScript:
+    There are two types of JavaScript
+        1 - Internal JavaScript
+        2 - External JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Script</title>
+</head>
+<body>
+
+    <h2>Internal JavaScript</h2>
+
+    <button onclick="sum()">Click To Sum</button> 
+
+    <button onclick="sumuser()">Click To Add Number</button>
+
+
+
+
+    <script>
+        function sum(){
+            a=10;
+            b=20;
+            return alert(a+b)
+
+        }
+        function sumuser(){
+            a=Number(prompt('Enter Number'));
+            b=Number(prompt('Enter Number'));
+
+            return alert(a+b);
+        }
+    </script>
+    
+</body>
+</html>
