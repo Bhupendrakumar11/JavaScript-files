@@ -1,0 +1,29 @@
+<script>
+    let phone = prompt('Do You hava phone');
+    let data = prompt('Which Reacharge plan do you have');
+    let app = prompt('Do you have application');
+    let subscription = prompt('Do you have Subscription of Netflix');
+
+    if (phone == 'Yes'){
+        if(data >= 299){
+            if (app == 'Yes'){
+                if (subscription == 'Yes'){
+                    document.writeln('Enjoy your Netflix Services')
+                }
+                else{
+                    document.writeln("You don't have subscription")
+                }
+            }
+            else{
+                document.writeln("You don't have application")
+            }
+        }
+        else{
+            document.writeln("You don't have engogh Data")
+        }
+    }
+    else{
+        document.writeln("You don't have Phone")
+    }
+
+</script>
