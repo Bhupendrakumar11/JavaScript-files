@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method of Function</title>
+</head>
+<body>
+
+    <script>
+        // Function Method
+        // call method
+
+        function printName(name){
+            console.log("Hello"+name);
+        }
+        printName.call(null, "This");
+
+
+        function employee(id, name){
+            this.id = id;
+            this.name = name;
+        }
+        function permemEmp(id, name, salary){
+            employee.call(this, id, name, salary);
+
+        }
+        function TmpEmp(id , name){
+            employee.call(this, id , name);
+        }
+
+        let empdatabase = new permemEmp(1, "Bhupendra", 50000);
+        console.log(empdatabase);
+
+        let empdatabase1 = new TmpEmp(1, "Lucky Kumar");
+        console.log(empdatabase1);
+
+
+        // max method using apply method , apply("null", arr)
+        let a = [40,50,305,204,50,20];
+        let max = Math.max.apply(this, a);
+        console.log('Max value is ', max);
+
+        let min = Math.min.apply(this, a);
+        console.log('Min Value is ', min);
+
+        // let count= Math.count.apply(this , a);
+        // console.log(count);
+
+        const student ={
+            fullname: function(city, country){
+                return this.name + " " + this.last
+                + " From " + city + " , " + country;
+            },
+        };
+        const person = {
+            name:"Bhupendra", 
+            last :"Kumar",
+        };
+        console.log(student.fullname.apply(person, ["Fatehpur", "India"]));
+
+        let web = {
+            name : "Tailwind",
+            getName : function(){
+                return this.name;
+            },
+        }
+
+        let firstValue = web.getName();
+        console.log(firstValue)
+
+    </script>
+    
+</body>
+</html>

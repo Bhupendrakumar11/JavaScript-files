@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Declartion Function
+        function myfunction(){
+            let a = 10;
+            let b = 30;
+
+            document.writeln(a+b)
+        }
+        myfunction();
+
+        //Parameterrize Function
+        function para(a, b){
+            document.writeln(a+b);
+        }
+        para(20,30);
+        para(40,50);
+
+        //expression function
+        let myname = function(){
+            let a=10;
+            let b=20;
+            console.log(a+b);
+        };
+        value();
+
+        let user = function(){
+            let a = prompt("Enter your Name");
+            console.log(a)
+        };
+
+        user();
+
+        //IIFE function
+        (function(){
+            console.log("I am IIFE function")
+        })
+        ();
+
+        //Arrow Function
+       let arrowfun= () => console.log('Hello World');
+       arrowfun();
+    </script>
+    
+</body>
+</html>
